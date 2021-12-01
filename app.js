@@ -47,6 +47,7 @@ middleDropdown.addEventListener('change', () => {
     middleEl.textContent = '';
     let img = document.createElement('img');
     img.src = `./assets/${id}-middle.png`;
+    img.classList.add('middle-segment');
     middleEl.append(img);
 
     // update the stats to show the new count
