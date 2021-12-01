@@ -26,9 +26,10 @@ headDropdown.addEventListener('change', () => {
     headCount++;
 
     // update the dom for the head
+    headEl.textContent = '';
     let img = document.createElement('img');
     img.src = `./assets/${id}-head.png`;
-    
+
     headEl.append(img);
     
     // update the stats to show the new count
