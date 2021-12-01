@@ -7,7 +7,7 @@ const headEl = document.getElementById('head');
 const middleEl = document.getElementById('middle');
 const bottomEl = document.getElementById('bottom');
 const reportEl = document.getElementById('report');
-const chatchphrasesEl = document.getElementById('chatchphrases');
+const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
 
@@ -97,9 +97,18 @@ function displayStats() {
 
 function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
+    catchphrasesEl.textContent = '';
 
     // loop through each catchphrase in state
     // and for each catchphrase
     // create an HTML element with the catchphrase as its text content
     // and append that HTML element to the cleared-out DOM
+    for (let catchphrase of catchphraseArray) {
+        const p = document.createElement('p');
+        p.classList.add('catchphrase');
+        p.textContent = catchphrase;
+        catchphrasesEl.append(p);
+    } 
+    
+
 }
