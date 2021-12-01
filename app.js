@@ -66,24 +66,33 @@ bottomDropdown.addEventListener('change', () => {
     let img = document.createElement('img');
     img.src = `./assets/${id}-pants.png`;
     bottomEl.append(img);
-
+    
     // update the stats to show the new count
     displayStats();
 });
 
 catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
+    const newCatchphrase = catchphraseInput.value;
     
     // push the new catchphrase to the catchphrase array in state
-    // update the dom for the bottom
+    catchphraseArray.push(newCatchphrase);    
+    
     // clear out the form input's value so it's empty to the user
-    // update the dom to show the new catchphrases (call a function to do this work)
+    catchphraseInput.value = '';
+    
+    // grab div id catchphrases (update the DOM for the catchphrases)
+    // let catchphrases = document.createElement('catchphrases')
+    // catchphrases.src
 
+    // update the dom to show the new catchphrases (call a function to do this work)
+    displayCatchphrases()
 });
 
 function displayStats() {
     // change the text content of the reportEl to tell the user how many times they've changed each piece of the state
-    const statsString = makeStatsString(); // call this function with the correct arguments
+    const statsString = makeStatsString(headCount, midCount, bottomCount); // call this function with the correct arguments
+    reportEl.textContent = `${statsString}`;
 }
 
 function displayCatchphrases() {
