@@ -131,7 +131,18 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
 
+.bg-head img {
+    height: 233.33px;
+}
+
+.middle-segment {
+    height: 155.55px;
+}
+
+.bg-bottom img {
+    height: 311.11px;
 }
 
 .catchphrase {
