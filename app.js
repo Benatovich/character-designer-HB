@@ -41,7 +41,7 @@ middleDropdown.addEventListener('change', () => {
     const id = middleDropdown.value;
 
     // increment the middle change count state
-    midCount++
+    midCount++;
 
     // update the dom for the middle
     middleEl.textContent = '';
@@ -60,7 +60,7 @@ bottomDropdown.addEventListener('change', () => {
     const id = bottomDropdown.value;
 
     // increment the bottom change count state
-    bottomCount++
+    bottomCount++;
 
     // update the dom for the bottom
     bottomEl.textContent = '';
@@ -87,7 +87,7 @@ catchphraseButton.addEventListener('click', () => {
     // catchphrases.src
 
     // update the dom to show the new catchphrases (call a function to do this work)
-    displayCatchphrases()
+    displayCatchphrases();
 });
 
 function displayStats() {
